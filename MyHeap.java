@@ -35,6 +35,21 @@ public class MyHeap {
       pushDown(data,data.length,i);
     }
   }
+  public static void heapsort(int[] data) {
+    heapify(data);
+    for (int i = data.length-1;i > 0;i--) {
+      swap(data,0,i);
+      pushDown(data,i,0);
+    }
+  }
+
+  public static void main(String[] args) {
+    int[] ary = new int[] {2,7,13,0,52,66,10,30,10, 36,4510,11,21,2,2};
+    heapify(ary);
+    System.out.println(Arrays.toString(ary));
+    heapsort(ary);
+    System.out.println(Arrays.toString(ary));
+  }
   
   
 }
