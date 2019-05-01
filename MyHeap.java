@@ -30,6 +30,11 @@ public class MyHeap {
    swap(data,index,(index-1)/2);
    pushUp(data,(index-1)/2);
   }
+  public static void heapify(int[] data) {
+    for (int i = data.length-1;i >= 0;i--) {
+      pushDown(data,data.length,i);
+    }
+  }
   
   
 }
